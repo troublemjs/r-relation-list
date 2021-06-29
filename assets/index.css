@@ -1,0 +1,130 @@
+.relation-list ul,
+.relation-list li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.relation-list-content {
+  display: flex;
+  align-items: center;
+}
+.relation-list-header {
+  background: transparent;
+}
+.relation-list-footer {
+  background: transparent;
+}
+.relation-list-header,
+.relation-list-footer {
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+.relation-list-bordered {
+  border: 1px solid red;
+  border-radius: 2px;
+}
+.relation-list-bordered .relation-list-header {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+.relation-list-bordered .relation-list-footer {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+.relation-list-bordered .relation-list-content {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+.relation-list-bordered .relation-list-content {
+  padding-left: 1em;
+  padding-right: 1em;
+}
+.relation-list-bordered.relation-list-content {
+  padding: 1em;
+}
+.relation-list-split .relation-list-header {
+  border-bottom: 1px solid red;
+}
+.relation-list-split .relation-list-footer {
+  border-top: 1px solid red;
+}
+.relation-list-title {
+  display: flex;
+  align-items: center;
+}
+.relation-list-title::after {
+  content: ' ';
+  display: inline-block;
+  height: 1px;
+  width: 1em;
+  background: red;
+}
+.relation-list-parent-line {
+  height: 100%;
+  border-left: 1px solid red;
+}
+.relation-list-items:only-child {
+  background: yellow;
+}
+.relation-list-items:only-child > .relation-list-item-prefix-line {
+  display: none;
+  border: none;
+}
+.relation-list-item-wrap {
+  display: flex;
+  align-items: stretch;
+  position: relative;
+}
+.relation-list-item-wrap:first-child > .relation-list-item-prefix-line::after {
+  display: none;
+}
+.relation-list-item-wrap:first-child > .relation-list-item-prefix-line::before {
+  content: '';
+  display: inline-block;
+  width: 100%;
+  height: 50%;
+  background: inherit;
+  border-bottom: 1px solid red;
+  position: absolute;
+  top: 0;
+  left: -1px;
+}
+.relation-list-item-wrap:last-child > .relation-list-item-prefix-line::after {
+  display: none;
+}
+.relation-list-item-wrap:last-child > .relation-list-item-prefix-line::before {
+  content: '';
+  display: inline-block;
+  width: 100%;
+  height: 50%;
+  background: inherit;
+  border-top: 1px solid red;
+  position: absolute;
+  bottom: 0;
+  left: -1px;
+}
+.relation-list-item-wrap:only-child > .relation-list-item-prefix-line {
+  display: none;
+}
+.relation-list-item-prefix-line {
+  width: 1em;
+  height: inherit;
+  display: flex;
+  align-items: center;
+  position: relative;
+  background: white;
+  border-left: 1px solid red;
+}
+.relation-list-item-prefix-line::after {
+  content: ' ';
+  width: 100%;
+  border-bottom: 1px solid red;
+}
+.relation-list-item {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.relation-list-item:only-child::before {
+  width: 0;
+}
