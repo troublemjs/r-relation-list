@@ -1,24 +1,37 @@
-import React, { useLayoutEffect, useRef, useState } from 'react';
+import React from 'react';
 import classNames from 'classnames';
 
 import Item from './Item';
 
 const EMPTY_DATA: never[] = [];
 
+/** RelationListProps */
 export interface RelationListProps<T> {
+  /** 当使用 `dataSource` 时，可以自定义渲染列表项 */
   renderItem?: (record: T, index: number) => React.ReactNode;
+  /** 列表显示标题 */
   title?: React.ReactNode;
+  /** 列表数据源 */
   dataSource?: T[];
+  /**
+   * @description 当 `renderItem` 自定义渲染列表有效时，自定义每行的`key`的获取方式
+   * @default list-item-${index}
+   */
   rowKey?: ((item: T) => string) | string;
+  /** 数据为空是显示 */
   empty?: React.ReactNode;
+  /** 前缀 classname，如需自定义，则需要同步修改 less 变量 */
   prefixCls?: string;
   className?: string;
   children?: React.ReactNode;
   style?: React.CSSProperties;
+  /** 是否展示边框 */
   bordered?: boolean;
-  /** 是否展示分割线 */
+  /** 是否展示分割线，分割 `header` 与 `footer` */
   split?: boolean;
+  /** 列表头部 */
   header?: React.ReactNode;
+  /** 列表底部 */
   footer?: React.ReactNode;
 }
 const RelationList = <RecordType extends unknown>(
@@ -40,19 +53,6 @@ const RelationList = <RecordType extends unknown>(
     ...restProps
   } = props;
   const mergedData = dataSource || EMPTY_DATA;
-  const ulRef = useRef<HTMLUListElement>(null);
-  const [contentLineWidth, setContentLineWidth] = useState<number>(0);
-
-  useLayoutEffect(() => {
-    const ulNode = ulRef.current;
-    const ulHeight = ulNode?.clientHeight ?? 0;
-    const heithg0th = ulNode?.firstElementChild?.clientHeight ?? 0;
-
-    const contentLineHeight = ulHeight - heithg0th;
-    console.log(contentLineHeight);
-
-    setContentLineWidth(contentLineHeight);
-  }, [mergedData]);
 
   const keys: { [key: string]: string } = {};
 
@@ -75,7 +75,6 @@ const RelationList = <RecordType extends unknown>(
 
     return renderItem(item, idx);
   };
-  // if (mergedData.length === 0) return empty;
 
   let childrenContent: React.ReactNode;
   if (mergedData.length > 0) {
@@ -86,22 +85,23 @@ const RelationList = <RecordType extends unknown>(
         {child}
       </li>
     ));
-    childrenContent = (
-      <ul ref={ulRef} className={`${prefixCls}-items`}>
-        {newItems}
-      </ul>
-    );
+    childrenContent = <ul className={`${prefixCls}-items`}>{newItems}</ul>;
+  } else if (!children) {
+    childrenContent = empty;
   }
 
+  /** 是否需要使用 div 包裹 content 内容，有 header 或者 footer 时需要 */
   const shouldContent = Boolean(header || footer);
-  const Content = shouldContent ? 'div' : React.Fragment;
+  const clsContent = `${prefixCls}-content`;
+  const TagContent = shouldContent ? 'div' : React.Fragment;
+  const propsTagContent = shouldContent ? { className: clsContent } : null;
 
   const classString = classNames(
     prefixCls,
     {
       [`${prefixCls}-split`]: split,
       [`${prefixCls}-bordered`]: bordered,
-      [`${prefixCls}-content`]: !shouldContent,
+      [clsContent]: !shouldContent,
     },
     className,
   );
@@ -109,24 +109,12 @@ const RelationList = <RecordType extends unknown>(
   return (
     <div className={classString} {...restProps}>
       {header && <div className={`${prefixCls}-header`}>{header}</div>}
-      <Content className={`${prefixCls}-content`}>
+      <TagContent {...propsTagContent}>
         <span className={`${prefixCls}-title`}>{title}</span>
         {childrenContent}
         {children}
-      </Content>
+      </TagContent>
       {footer && <div className={`${prefixCls}-footer`}>{footer}</div>}
-      {/* <div
-        className={`${prefixCls}-parent-line`}
-        style={{ height: firstHeight }}
-      /> */}
-      {/* <ul ref={ulRef} className={`${prefixCls}-content`}> */}
-      {/* {mergedData?.map((item, idx) => (
-          <li key={idx} className={`${prefixCls}-item`}>
-            <div className={`${prefixCls}-item-vertical-line`} />
-            {renderItem?.(item, idx) ?? `${item}`}
-          </li>
-        ))} */}
-      {/* </ul> */}
     </div>
   );
 };

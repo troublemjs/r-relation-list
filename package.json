@@ -1,6 +1,6 @@
 {
   "name": "r-relation-list",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "homepage": "http://github.com/troublemjs/r-relation-list",
   "keywords": [
     "React",
@@ -8,16 +8,21 @@
     "RelationList",
     "Dumi",
     "Typescript",
-    "Less"
+    "ui"
   ],
   "author": "ray <guokangf@gmail.com>",
-  "repository": "https://github.com/troublemjs/r-relation-list.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/troublemjs/r-relation-list.git",
+    "branch": "master",
+    "platform": "github"
+  },
   "license": "MIT",
   "scripts": {
     "start": "dumi dev",
     "docs:build": "dumi build",
     "docs:deploy": "gh-pages -d docs-dist",
-    "build": "father-build && lessc assets/index.less assets/index.css",
+    "build": "father-build && lessc assets/index.less assets/index.css && cp assets/index.css dist/index.css",
     "deploy": "npm run docs:build && npm run docs:deploy",
     "release": "npm run build && npm publish",
     "prettier": "prettier --write \"**/*.{js,jsx,tsx,ts,less,md,json}\"",
@@ -55,6 +60,7 @@
     "lint-staged": "^10.0.7",
     "prettier": "^2.2.1",
     "react": "^17.0.2",
+    "typescript": "4.2.3",
     "yorkie": "^2.0.0"
   }
 }

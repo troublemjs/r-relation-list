@@ -1,5 +1,5 @@
 /**
- * title: 关系型嵌套列表
+ * title: 关系型二维数组嵌套
  * desc: 与或关系嵌套使用案例
  */
 
@@ -64,35 +64,38 @@ export default () => {
   };
 
   return (
-    <>
-      <RelationList<IItem[]>
-        title="且"
-        dataSource={data}
-        renderItem={(group, groupIdx) => (
-          <RelationList<IItem>
-            title={
-              <>
-                或{' '}
-                <button onClick={() => handleAddItem(group, groupIdx)}>
-                  +
-                </button>
-              </>
-            }
-            dataSource={group}
-            renderItem={(item, idx) => (
-              <>
-                <input placeholder="输入Label" />
-                <input placeholder="输入Value" />
+    <RelationList<IItem[]>
+      title="且"
+      dataSource={data}
+      header={<button onClick={handleAddGroup}>新增一个或条件</button>}
+      renderItem={(group, groupIdx) => (
+        <RelationList<IItem>
+          title={
+            <>
+              或{' '}
+              <button onClick={() => handleAddItem(group, groupIdx)}>+</button>
+            </>
+          }
+          dataSource={group}
+          renderItem={(item, idx) => (
+            <RelationList.Item
+              actions={[
                 <button onClick={() => handleRemove(item, idx, groupIdx)}>
                   -
-                </button>
-              </>
-            )}
-          />
-        )}
-      />
-      <br />
-      <button onClick={handleAddGroup}>新增一个或条件</button>
-    </>
+                </button>,
+              ]}
+              extra={
+                <em>
+                  额外内容 #{groupIdx}-{idx}
+                </em>
+              }
+            >
+              <input placeholder="输入Label" />
+              <input placeholder="输入Value" />
+            </RelationList.Item>
+          )}
+        />
+      )}
+    />
   );
 };

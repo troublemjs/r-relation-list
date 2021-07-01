@@ -12,7 +12,7 @@ export default () => {
   const [data, setData] = useState<number[]>([1, 2]);
 
   const handleAdd = () => {
-    setData((old) => [...old, old[old.length - 1] + 1]);
+    setData((old) => [...old, parseInt(`${Math.random() * 100}`)]);
   };
 
   const handleRm = (idx: number) => {
@@ -22,17 +22,18 @@ export default () => {
   };
 
   return (
-    <>
-      <RelationList<number>
-        title="当前关系标题"
-        dataSource={data}
-        renderItem={(item, idx) => (
-          <div>
-            {item} <button onClick={() => handleRm(idx)}>rm</button>
-          </div>
-        )}
-      />
-      <button onClick={handleAdd}>add</button>
-    </>
+    <RelationList<typeof data[number]>
+      title="动态改变"
+      dataSource={data}
+      footer={<button onClick={handleAdd}>add</button>}
+      renderItem={(item, idx) => (
+        <RelationList.Item
+          style={{ padding: '1rem' }}
+          actions={[<button onClick={() => handleRm(idx)}>rm</button>]}
+        >
+          content #{item}
+        </RelationList.Item>
+      )}
+    />
   );
 };

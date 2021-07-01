@@ -11,8 +11,14 @@ import '../../assets/index.less';
 
 export default () => (
   <RelationList<number>
-    title="当前关系标题"
+    title="简单列表"
     dataSource={[1, 2, 3, 4, 5]}
-    renderItem={(item) => <div>{item + 1}</div>}
+    renderItem={(item) => (
+      <RelationList.Item
+        style={{ padding: '1rem', border: '1px solid fuchsia' }}
+      >
+        content {item}
+      </RelationList.Item>
+    )}
   />
 );
