@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1625216425386" clover="3.2.0">
+  <project timestamp="1625216425386" name="All files">
+    <metrics statements="89" coveredstatements="35" conditionals="63" coveredconditionals="25" methods="18" coveredmethods="5" elements="170" coveredelements="65" complexity="0" loc="89" ncloc="89" packages="5" files="13" classes="13"/>
+    <package name="r-relation-list">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="index.js" path="/Users/ray/developer/github/troublem/r-relation-list/index.js">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="r-relation-list.src">
+      <metrics statements="37" coveredstatements="35" conditionals="31" coveredconditionals="25" methods="5" coveredmethods="5"/>
+      <file name="Item.tsx" path="/Users/ray/developer/github/troublem/r-relation-list/src/Item.tsx">
+        <metrics statements="6" coveredstatements="6" conditionals="5" coveredconditionals="5" methods="2" coveredmethods="2"/>
+        <line num="15" count="2" type="stmt"/>
+        <line num="17" count="4" type="stmt"/>
+        <line num="19" count="4" type="cond" truecount="3" falsecount="0"/>
+        <line num="22" count="4" type="stmt"/>
+        <line num="32" count="4" type="stmt"/>
+        <line num="41" count="2" type="stmt"/>
+      </file>
+      <file name="RelationList.tsx" path="/Users/ray/developer/github/troublem/r-relation-list/src/RelationList.tsx">
+        <metrics statements="31" coveredstatements="29" conditionals="26" coveredconditionals="20" methods="3" coveredmethods="3"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="37" count="1" type="stmt"/>
+        <line num="54" count="7" type="stmt"/>
+        <line num="55" count="7" type="cond" truecount="1" falsecount="1"/>
+        <line num="57" count="7" type="stmt"/>
+        <line num="59" count="7" type="stmt"/>
+        <line num="60" count="15" type="cond" truecount="1" falsecount="1"/>
+        <line num="63" count="15" type="cond" truecount="1" falsecount="1"/>
+        <line num="64" count="0" type="stmt"/>
+        <line num="65" count="15" type="cond" truecount="1" falsecount="1"/>
+        <line num="66" count="0" type="stmt"/>
+        <line num="68" count="15" type="stmt"/>
+        <line num="71" count="15" type="cond" truecount="1" falsecount="1"/>
+        <line num="72" count="15" type="stmt"/>
+        <line num="74" count="15" type="stmt"/>
+        <line num="76" count="15" type="stmt"/>
+        <line num="80" count="7" type="cond" truecount="2" falsecount="0"/>
+        <line num="81" count="3" type="stmt"/>
+        <line num="82" count="3" type="stmt"/>
+        <line num="83" count="15" type="stmt"/>
+        <line num="88" count="3" type="stmt"/>
+        <line num="89" count="4" type="cond" truecount="1" falsecount="1"/>
+        <line num="90" count="4" type="stmt"/>
+        <line num="94" count="7" type="cond" truecount="2" falsecount="0"/>
+        <line num="95" count="7" type="stmt"/>
+        <line num="96" count="7" type="cond" truecount="2" falsecount="0"/>
+        <line num="97" count="7" type="cond" truecount="2" falsecount="0"/>
+        <line num="99" count="7" type="stmt"/>
+        <line num="109" count="7" type="stmt"/>
+        <line num="122" count="1" type="stmt"/>
+        <line num="124" count="1" type="stmt"/>
+      </file>
+      <file name="index.ts" path="/Users/ray/developer/github/troublem/r-relation-list/src/index.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="r-relation-list.src..umi">
+      <metrics statements="12" coveredstatements="0" conditionals="7" coveredconditionals="0" methods="4" coveredmethods="0"/>
+      <file name="umi.ts" path="/Users/ray/developer/github/troublem/r-relation-list/src/.umi/umi.ts">
+        <metrics statements="12" coveredstatements="0" conditionals="7" coveredconditionals="0" methods="4" coveredmethods="0"/>
+        <line num="14" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="35" count="0" type="stmt"/>
+        <line num="39" count="0" type="stmt"/>
+        <line num="46" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="48" count="0" type="stmt"/>
+        <line num="49" count="0" type="stmt"/>
+        <line num="50" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="51" count="0" type="stmt"/>
+        <line num="52" count="0" type="stmt"/>
+        <line num="55" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="r-relation-list.src..umi.core">
+      <metrics statements="40" coveredstatements="0" conditionals="25" coveredconditionals="0" methods="9" coveredmethods="0"/>
+      <file name="devScripts.ts" path="/Users/ray/developer/github/troublem/r-relation-list/src/.umi/core/devScripts.ts">
+        <metrics statements="17" coveredstatements="0" conditionals="15" coveredconditionals="0" methods="5" coveredmethods="0"/>
+        <line num="3" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="6" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="18" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="23" count="0" type="cond" truecount="0" falsecount="5"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="30" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="37" count="0" type="stmt"/>
+        <line num="39" count="0" type="stmt"/>
+        <line num="42" count="0" type="stmt"/>
+        <line num="47" count="0" type="stmt"/>
+      </file>
+      <file name="history.ts" path="/Users/ray/developer/github/troublem/r-relation-list/src/.umi/core/history.ts">
+        <metrics statements="8" coveredstatements="0" conditionals="7" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="7" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="12" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="13" count="0" type="cond" truecount="0" falsecount="1"/>
+        <line num="14" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+      </file>
+      <file name="plugin.ts" path="/Users/ray/developer/github/troublem/r-relation-list/src/.umi/core/plugin.ts">
+        <metrics statements="1" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="4" count="0" type="stmt"/>
+      </file>
+      <file name="pluginRegister.ts" path="/Users/ray/developer/github/troublem/r-relation-list/src/.umi/core/pluginRegister.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="polyfill.ts" path="/Users/ray/developer/github/troublem/r-relation-list/src/.umi/core/polyfill.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+      <file name="routes.ts" path="/Users/ray/developer/github/troublem/r-relation-list/src/.umi/core/routes.ts">
+        <metrics statements="14" coveredstatements="0" conditionals="3" coveredconditionals="0" methods="3" coveredmethods="0"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="25" count="0" type="cond" truecount="0" falsecount="3"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="39" count="0" type="stmt"/>
+        <line num="355" count="0" type="stmt"/>
+        <line num="360" count="0" type="stmt"/>
+        <line num="366" count="0" type="stmt"/>
+      </file>
+      <file name="umiExports.ts" path="/Users/ray/developer/github/troublem/r-relation-list/src/.umi/core/umiExports.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="r-relation-list.src..umi.dumi.demos">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="index.ts" path="/Users/ray/developer/github/troublem/r-relation-list/src/.umi/dumi/demos/index.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+  </project>
+</coverage>

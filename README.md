@@ -52,15 +52,11 @@ npm start
 
 ## Test Case
 
-TODO
-
-http://localhost:8018/tests/runner.html?coverage
+/tests/
 
 ## Coverage
 
-TODO
-
-http://localhost:8018/node_modules/rc-server/node_modules/node-jscover/lib/front-end/jscoverage.html?w=http://localhost:8018/tests/runner.html?coverage
+/coverage/lcov-report/index.html
 
 ## License
 

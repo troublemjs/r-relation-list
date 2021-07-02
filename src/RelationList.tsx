@@ -110,7 +110,7 @@ const RelationList = <RecordType extends unknown>(
     <div className={classString} {...restProps}>
       {header && <div className={`${prefixCls}-header`}>{header}</div>}
       <TagContent {...propsTagContent}>
-        <span className={`${prefixCls}-title`}>{title}</span>
+        {title && <span className={`${prefixCls}-title`}>{title}</span>}
         {childrenContent}
         {children}
       </TagContent>

@@ -1,0 +1,172 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RelationList.Basic renders correctly basic 1`] = `
+<div
+  class="test-prefix test-prefix-split test-prefix-bordered test-prefix-content test-class-name"
+>
+  <ul
+    class="test-prefix-items"
+  >
+    <li
+      class="test-prefix-item-wrap"
+    >
+      <div
+        class="test-prefix-item-prefix-line"
+      />
+      1
+    </li>
+    <li
+      class="test-prefix-item-wrap"
+    >
+      <div
+        class="test-prefix-item-prefix-line"
+      />
+      2
+    </li>
+    <li
+      class="test-prefix-item-wrap"
+    >
+      <div
+        class="test-prefix-item-prefix-line"
+      />
+      3
+    </li>
+    <li
+      class="test-prefix-item-wrap"
+    >
+      <div
+        class="test-prefix-item-prefix-line"
+      />
+      4
+    </li>
+    <li
+      class="test-prefix-item-wrap"
+    >
+      <div
+        class="test-prefix-item-prefix-line"
+      />
+      5
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`RelationList.Basic renders correctly footer 1`] = `
+<div
+  class="relation-list relation-list-split relation-list-bordered"
+>
+  <div
+    class="relation-list-content"
+  >
+    <ul
+      class="relation-list-items"
+    >
+      <li
+        class="relation-list-item-wrap"
+      >
+        <div
+          class="relation-list-item-prefix-line"
+        />
+        1
+      </li>
+      <li
+        class="relation-list-item-wrap"
+      >
+        <div
+          class="relation-list-item-prefix-line"
+        />
+        2
+      </li>
+      <li
+        class="relation-list-item-wrap"
+      >
+        <div
+          class="relation-list-item-prefix-line"
+        />
+        3
+      </li>
+      <li
+        class="relation-list-item-wrap"
+      >
+        <div
+          class="relation-list-item-prefix-line"
+        />
+        4
+      </li>
+      <li
+        class="relation-list-item-wrap"
+      >
+        <div
+          class="relation-list-item-prefix-line"
+        />
+        5
+      </li>
+    </ul>
+  </div>
+  <div
+    class="relation-list-footer"
+  >
+    test-footer
+  </div>
+</div>
+`;
+
+exports[`RelationList.Basic renders correctly header 1`] = `
+<div
+  class="relation-list relation-list-split relation-list-bordered"
+>
+  <div
+    class="relation-list-header"
+  >
+    test-header
+  </div>
+  <div
+    class="relation-list-content"
+  >
+    <ul
+      class="relation-list-items"
+    >
+      <li
+        class="relation-list-item-wrap"
+      >
+        <div
+          class="relation-list-item-prefix-line"
+        />
+        1
+      </li>
+      <li
+        class="relation-list-item-wrap"
+      >
+        <div
+          class="relation-list-item-prefix-line"
+        />
+        2
+      </li>
+      <li
+        class="relation-list-item-wrap"
+      >
+        <div
+          class="relation-list-item-prefix-line"
+        />
+        3
+      </li>
+      <li
+        class="relation-list-item-wrap"
+      >
+        <div
+          class="relation-list-item-prefix-line"
+        />
+        4
+      </li>
+      <li
+        class="relation-list-item-wrap"
+      >
+        <div
+          class="relation-list-item-prefix-line"
+        />
+        5
+      </li>
+    </ul>
+  </div>
+</div>
+`;
