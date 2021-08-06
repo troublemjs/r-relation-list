@@ -1,6 +1,6 @@
 {
   "name": "r-relation-list",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "http://github.com/troublemjs/r-relation-list",
   "keywords": [
     "React",
@@ -22,6 +22,7 @@
     "start": "dumi dev",
     "docs:build": "dumi build",
     "docs:deploy": "gh-pages -d docs-dist",
+    "style:build": "lessc -x assets/index.less dist/index.css",
     "build": "father-build && lessc assets/index.less assets/index.css && cp assets/index.css dist/index.css",
     "deploy": "npm run docs:build && npm run docs:deploy",
     "release": "npm run build && npm publish",
